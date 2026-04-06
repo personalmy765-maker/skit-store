@@ -105,18 +105,17 @@
 <div class="skit-card" onclick="copyText(this)">When you try to lie but laugh</div>
 <div class="skit-card" onclick="copyText(this)">When your parents say “we need to talk”</div>
 <div class="skit-card" onclick="copyText(this)">When everything goes wrong in one day</div>
-    <!-- ADD YOUR OTHER SKITS HERE -->
+</div> 
 
     <a href="index.html" class="back">⬅️ Back Home</a>
 
-</div>
 <script>
 function copyText(element) {
     let text = element.innerText;
-    navigator..clipboard.writeText(text);
+    navigator.clipboard.writeText(text);
     alert("Copied: " + text);
 }
-</script> 
+</script>
 
 </body>
 </html>

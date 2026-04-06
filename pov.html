@@ -55,7 +55,7 @@
 
 <div class="container">
 
-   <div class="skit-card" onclick="copyText(this)">POV: You walk into a room and everyone stops talking</div>
+<div class="skit-card" onclick="copyText(this)">POV: You walk into a room and everyone stops talking</div>
 <div class="skit-card" onclick="copyText(this)">POV: Your friend eats your food without asking</div>
 <div class="skit-card" onclick="copyText(this)">POV: You pretend to know what someone is talking about</div>
 <div class="skit-card" onclick="copyText(this)">POV: You try to act cool but trip over nothing</div>
@@ -109,19 +109,18 @@
 <div class="skit-card" onclick="copyText(this)">POV: You accidentally send a voice note while laughing</div>
 <div class="skit-card" onclick="copyText(this)">POV: You overthink every small interaction all day</div>
 <div class="skit-card" onclick="copyText(this)">POV: You try to act calm during a scary movie but scream loudly</div>
+</div> 
 
-    <!-- ADD YOUR OTHER SKITS HERE -->
 
-    <a href="index.html" class="back">⬅️ Back Home</a>
+    <a href="index.html" class="back">⬅️ Back Home</a> 
 
-</div>
 <script>
 function copyText(element) {
     let text = element.innerText;
-    navigator..clipboard.writeText(text);
+    navigator.clipboard.writeText(text);
     alert("Copied: " + text);
 }
-</script> 
+</script>
 
 </body>
 </html>

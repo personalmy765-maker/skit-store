@@ -55,7 +55,7 @@
 
 <div class="container">
 
-   <div class="skit-card" onclick="copyText(this)">When your crush replies "k" to your long text</div>
+<div class="skit-card" onclick="copyText(this)">When your crush replies "k" to your long text</div>
 <div class="skit-card" onclick="copyText(this)">Trying to act normal after a big argument</div>
 <div class="skit-card" onclick="copyText(this)">Watching your partner eat your food without asking</div>
 <div class="skit-card" onclick="copyText(this)">Secretly stalking your crush on social media</div>
@@ -110,20 +110,19 @@
 <div class="skit-card" onclick="copyText(this)">Trying to hide your phone activity but getting caught</div>
 <div class="skit-card" onclick="copyText(this)">When bae copies your style and you notice</div>
 <div class="skit-card" onclick="copyText(this)">Arguing over the best movie to watch</div>
+</div>
 
     <!-- ADD YOUR OTHER SKITS HERE -->
 
     <a href="index.html" class="back">⬅️ Back Home</a>
 
-</div>
 <script>
 function copyText(element) {
     let text = element.innerText;
-    navigator..clipboard.writeText(text);
+    navigator.clipboard.writeText(text);
     alert("Copied: " + text);
 }
-</script> 
-
+</script>
 
 </body>
 </html>
