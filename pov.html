@@ -36,6 +36,7 @@
             border-radius: 12px;
             font-weight: bold;
             text-align: center;
+            cursor: pointer;
         }
 
         .back {
@@ -54,66 +55,73 @@
 
 <div class="container">
 
-    <div class="skit-card">You walk into a room and everyone stops talking</div>
-    <div class="skit-card">Your friend eats your food without asking</div>
-    <div class="skit-card">You pretend to know what someone is talking about</div>
-    <div class="skit-card">You try to act cool but trip over nothing</div>
-    <div class="skit-card">You text someone and immediately regret it</div>
-    <div class="skit-card">You realize you’ve been talking to the wrong person</div>
-    <div class="skit-card">You open your front camera by accident in public</div>
-    <div class="skit-card">You try to act smart in class but get called out</div>
-    <div class="skit-card">You pretend to understand a joke and laugh awkwardly</div>
-    <div class="skit-card">You try to sneak food into a movie theater</div>
-    <div class="skit-card">You text someone while they’re literally next to you</div>
-    <div class="skit-card">You try to impress someone and fail badly</div>
-    <div class="skit-card">You trip in front of everyone but act like it’s normal</div>
-    <div class="skit-card">You send a risky meme to the wrong chat</div>
-    <div class="skit-card">You act busy to avoid talking to someone</div>
-    <div class="skit-card">You try to look serious during a funny video</div>
-    <div class="skit-card">You spill water and try to act like nothing happened</div>
-    <div class="skit-card">You try to tell a joke but everyone is quiet</div>
-    <div class="skit-card">You accidentally wave at someone who wasn’t waving at you</div>
-    <div class="skit-card">You laugh at your own joke before finishing it</div>
-    <div class="skit-card">You check the fridge 10 times even though you’re not hungry</div>
-    <div class="skit-card">You try to take a photo but someone photobombs it</div>
-    <div class="skit-card">You overthink a text reply for 30 minutes</div>
-    <div class="skit-card">You pretend you know the lyrics but you don’t</div>
-    <div class="skit-card">You fake a phone call to avoid someone</div>
-    <div class="skit-card">You try to act asleep but make noise instead</div>
-    <div class="skit-card">You rehearse your speech but forget it completely</div>
-    <div class="skit-card">You try to flirt but accidentally insult them</div>
-    <div class="skit-card">You try to eat quietly but make loud noises</div>
-    <div class="skit-card">You send a text meant for bae to your parents</div>
-    <div class="skit-card">You pretend to understand math but clearly don’t</div>
-    <div class="skit-card">You try to impress a teacher and fail</div>
-    <div class="skit-card">You eat something spicy and regret it immediately</div>
-    <div class="skit-card">You try to hide a gift but they find it</div>
-    <div class="skit-card">You practice dance moves alone and someone walks in</div>
-    <div class="skit-card">You try to act cool but trip on your own shoelaces</div>
-    <div class="skit-card">You laugh at a private joke but others stare</div>
-    <div class="skit-card">You attempt a DIY project that goes completely wrong</div>
-    <div class="skit-card">You try to look busy at work but fail</div>
-    <div class="skit-card">You overreact to a movie scene</div>
-    <div class="skit-card">You text in all caps and immediately regret it</div>
-    <div class="skit-card">You try to sing quietly but wake up everyone</div>
-    <div class="skit-card">You accidentally like an old photo while stalking</div>
-    <div class="skit-card">You act surprised by a gift you already saw</div>
-    <div class="skit-card">You forget someone’s name right after they tell you</div>
-    <div class="skit-card">You wave back at someone who wasn’t waving at you</div>
-    <div class="skit-card">You pretend to read a book but are actually scrolling your phone</div>
-    <div class="skit-card">You take a sip and spill it on yourself</div>
-    <div class="skit-card">You try to whisper but everyone hears</div>
-    <div class="skit-card">You rehearse your crush’s name in your head but mess it up</div>
-    <div class="skit-card">You try to sneak snacks into class but get caught</div>
-    <div class="skit-card">You accidentally send a voice note while laughing</div>
-    <div class="skit-card">You overthink every small interaction all day</div>
-    <div class="skit-card">You try to act calm during a scary movie but scream loudly</div>
+   <div class="skit-card" onclick="copyText(this)">POV: You walk into a room and everyone stops talking</div>
+<div class="skit-card" onclick="copyText(this)">POV: Your friend eats your food without asking</div>
+<div class="skit-card" onclick="copyText(this)">POV: You pretend to know what someone is talking about</div>
+<div class="skit-card" onclick="copyText(this)">POV: You try to act cool but trip over nothing</div>
+<div class="skit-card" onclick="copyText(this)">POV: You text someone and immediately regret it</div>
+<div class="skit-card" onclick="copyText(this)">POV: You realize you’ve been talking to the wrong person</div>
+<div class="skit-card" onclick="copyText(this)">POV: You open your front camera by accident in public</div>
+<div class="skit-card" onclick="copyText(this)">POV: You try to act smart in class but get called out</div>
+<div class="skit-card" onclick="copyText(this)">POV: You pretend to understand a joke and laugh awkwardly</div>
+<div class="skit-card" onclick="copyText(this)">POV: You try to sneak food into a movie theater</div>
+<div class="skit-card" onclick="copyText(this)">POV: You text someone while they’re literally next to you</div>
+<div class="skit-card" onclick="copyText(this)">POV: You try to impress someone and fail badly</div>
+<div class="skit-card" onclick="copyText(this)">POV: You trip in front of everyone but act like it’s normal</div>
+<div class="skit-card" onclick="copyText(this)">POV: You send a risky meme to the wrong chat</div>
+<div class="skit-card" onclick="copyText(this)">POV: You act busy to avoid talking to someone</div>
+<div class="skit-card" onclick="copyText(this)">POV: You try to look serious during a funny video</div>
+<div class="skit-card" onclick="copyText(this)">POV: You spill water and try to act like nothing happened</div>
+<div class="skit-card" onclick="copyText(this)">POV: You try to tell a joke but everyone is quiet</div>
+<div class="skit-card" onclick="copyText(this)">POV: You accidentally wave at someone who wasn’t waving at you</div>
+<div class="skit-card" onclick="copyText(this)">POV: You laugh at your own joke before finishing it</div>
+<div class="skit-card" onclick="copyText(this)">POV: You check the fridge 10 times even though you’re not hungry</div>
+<div class="skit-card" onclick="copyText(this)">POV: You try to take a photo but someone photobombs it</div>
+<div class="skit-card" onclick="copyText(this)">POV: You overthink a text reply for 30 minutes</div>
+<div class="skit-card" onclick="copyText(this)">POV: You pretend you know the lyrics but you don’t</div>
+<div class="skit-card" onclick="copyText(this)">POV: You fake a phone call to avoid someone</div>
+<div class="skit-card" onclick="copyText(this)">POV: You try to act asleep but make noise instead</div>
+<div class="skit-card" onclick="copyText(this)">POV: You rehearse your speech but forget it completely</div>
+<div class="skit-card" onclick="copyText(this)">POV: You try to flirt but accidentally insult them</div>
+<div class="skit-card" onclick="copyText(this)">POV: You try to eat quietly but make loud noises</div>
+<div class="skit-card" onclick="copyText(this)">POV: You send a text meant for bae to your parents</div>
+<div class="skit-card" onclick="copyText(this)">POV: You pretend to understand math but clearly don’t</div>
+<div class="skit-card" onclick="copyText(this)">POV: You try to impress a teacher and fail</div>
+<div class="skit-card" onclick="copyText(this)">POV: You eat something spicy and regret it immediately</div>
+<div class="skit-card" onclick="copyText(this)">POV: You try to hide a gift but they find it</div>
+<div class="skit-card" onclick="copyText(this)">POV: You practice dance moves alone and someone walks in</div>
+<div class="skit-card" onclick="copyText(this)">POV: You try to act cool but trip on your own shoelaces</div>
+<div class="skit-card" onclick="copyText(this)">POV: You laugh at a private joke but others stare</div>
+<div class="skit-card" onclick="copyText(this)">POV: You attempt a DIY project that goes completely wrong</div>
+<div class="skit-card" onclick="copyText(this)">POV: You try to look busy at work but fail</div>
+<div class="skit-card" onclick="copyText(this)">POV: You overreact to a movie scene</div>
+<div class="skit-card" onclick="copyText(this)">POV: You text in all caps and immediately regret it</div>
+<div class="skit-card" onclick="copyText(this)">POV: You try to sing quietly but wake up everyone</div>
+<div class="skit-card" onclick="copyText(this)">POV: You accidentally like an old photo while stalking</div>
+<div class="skit-card" onclick="copyText(this)">POV: You act surprised by a gift you already saw</div>
+<div class="skit-card" onclick="copyText(this)">POV: You forget someone’s name right after they tell you</div>
+<div class="skit-card" onclick="copyText(this)">POV: You wave back at someone who wasn’t waving at you</div>
+<div class="skit-card" onclick="copyText(this)">POV: You pretend to read a book but are actually scrolling your phone</div>
+<div class="skit-card" onclick="copyText(this)">POV: You take a sip and spill it on yourself</div>
+<div class="skit-card" onclick="copyText(this)">POV: You try to whisper but everyone hears</div>
+<div class="skit-card" onclick="copyText(this)">POV: You rehearse your crush’s name in your head but mess it up</div>
+<div class="skit-card" onclick="copyText(this)">POV: You try to sneak snacks into class but get caught</div>
+<div class="skit-card" onclick="copyText(this)">POV: You accidentally send a voice note while laughing</div>
+<div class="skit-card" onclick="copyText(this)">POV: You overthink every small interaction all day</div>
+<div class="skit-card" onclick="copyText(this)">POV: You try to act calm during a scary movie but scream loudly</div>
 
     <!-- ADD YOUR OTHER SKITS HERE -->
 
     <a href="index.html" class="back">⬅️ Back Home</a>
 
 </div>
+<script>
+function copyText(element) {
+    let text = element.innerText;
+    navigator..clipboard.writeText(text);
+    alert("Copied: " + text);
+}
+</script> 
 
 </body>
 </html>
