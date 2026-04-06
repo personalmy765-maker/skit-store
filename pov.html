@@ -2,65 +2,58 @@
 <html>
 <head>
     <title>POV Skits</title>
+
+    <!-- MOBILE FIX -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #121212;
-            color: white;
+            font-family: Arial;
+            background: #121212;
             margin: 0;
-            padding: 0;
-            text-align: center;
+            color: white;
         }
 
         h1 {
-            background-color: #1f1f1f;
+            background: #1f1f1f;
             padding: 20px;
+            text-align: center;
             margin: 0;
         }
 
         .container {
-            padding: 20px;
+            width: 90%;
+            max-width: 500px;
+            margin: auto;
+            margin-top: 30px;
         }
 
         .skit-card {
-            background: #ffffff;
+            background: white;
             color: black;
             padding: 15px;
-            margin: 10px auto;
-            width: 90%;
-            max-width: 500px;
+            margin: 10px 0;
             border-radius: 12px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-            transition: 0.3s;
+            font-weight: bold;
+            text-align: center;
         }
 
-        .skit-card:hover {
-            transform: scale(1.03);
-            background-color: #f0f0f0;
-        }
-
-        .back-btn {
-            display: inline-block;
-            margin-top: 30px;
-            padding: 12px 20px;
-            background-color: #ff4d6d;
+        .back {
+            display: block;
+            margin-top: 20px;
+            text-align: center;
             color: white;
             text-decoration: none;
-            border-radius: 10px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-
-        .back-btn:hover {
-            background-color: #ff1a3c;
         }
     </style>
 </head>
+
 <body>
 
 <h1>👀 POV Skits</h1>
 
 <div class="container">
+
     <div class="skit-card">You walk into a room and everyone stops talking</div>
     <div class="skit-card">Your friend eats your food without asking</div>
     <div class="skit-card">You pretend to know what someone is talking about</div>
@@ -115,9 +108,12 @@
     <div class="skit-card">You accidentally send a voice note while laughing</div>
     <div class="skit-card">You overthink every small interaction all day</div>
     <div class="skit-card">You try to act calm during a scary movie but scream loudly</div>
-</div>
 
-<a href="index.html" class="back-btn">⬅ Go Back Home</a>
+    <!-- ADD YOUR OTHER SKITS HERE -->
+
+    <a href="index.html" class="back">⬅️ Back Home</a>
+
+</div>
 
 </body>
 </html>
