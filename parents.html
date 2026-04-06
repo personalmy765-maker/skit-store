@@ -36,6 +36,7 @@
             border-radius: 12px;
             font-weight: bold;
             text-align: center;
+            cursor: pointer;
         }
 
         .back {
@@ -54,61 +55,69 @@
 
 <div class="container">
 
-   <div class="skit-card">African parents: "Who taught you that nonsense?" vs American parents: "Where did you learn that?"</div>
-<div class="skit-card">African parents: "Come here now!" vs American parents: "Can we talk?"</div>
-<div class="skit-card">African parents: Knock and enter immediately vs American parents: Wait for permission</div>
-<div class="skit-card">African parents: "Doctor or lawyer!" vs American parents: "Follow your dreams"</div>
-<div class="skit-card">African parents: "Finish your food!" vs American parents: "Eat if you want"</div>
-<div class="skit-card">African parents: "Who is calling you?" vs American parents: "It's your phone"</div>
-<div class="skit-card">African parents: "You are not going anywhere!" vs American parents: "Be safe"</div>
-<div class="skit-card">African parents: "Respect your elders!" vs American parents: "Respect everyone"</div>
-<div class="skit-card">African parents: "Why are you sleeping?" vs American parents: "You must be tired"</div>
-<div class="skit-card">African parents: "Give me your phone!" vs American parents: "Do you need privacy?"</div>
-<div class="skit-card">African parents: "Why is this not A?" vs American parents: "You tried your best"</div>
-<div class="skit-card">African parents: "Don't disgrace this family!" vs American parents: "Be yourself"</div>
-<div class="skit-card">African parents: "Sit properly!" vs American parents: "Be comfortable"</div>
-<div class="skit-card">African parents: "You think life is a joke?" vs American parents: "Let’s be serious"</div>
-<div class="skit-card">African parents: "Go and greet them!" vs American parents: "Say hi"</div>
-<div class="skit-card">African parents: "Close that door!" vs American parents: "Privacy matters"</div>
-<div class="skit-card">African parents: "You will understand later" vs American parents: "Let me explain"</div>
-<div class="skit-card">African parents: "No phone for you!" vs American parents: "Reduce screen time"</div>
-<div class="skit-card">African parents: "Why are you crying?" vs American parents: "It's okay"</div>
-<div class="skit-card">African parents: "I will beat you!" vs American parents: "There will be consequences"</div>
-<div class="skit-card">African parents: "Who is your mate?" vs American parents: "Respect others"</div>
-<div class="skit-card">African parents: "Turn off that light!" vs American parents: "Save electricity"</div>
-<div class="skit-card">African parents: "No going out!" vs American parents: "Have fun"</div>
-<div class="skit-card">African parents: "You are too young!" vs American parents: "Let’s talk about it"</div>
-<div class="skit-card">African parents: "Why is your result like this?" vs American parents: "We can improve"</div>
-<div class="skit-card">African parents: "Don't question me!" vs American parents: "Ask questions"</div>
-<div class="skit-card">African parents: "You will marry early!" vs American parents: "Take your time"</div>
-<div class="skit-card">African parents: "Eat everything!" vs American parents: "Eat what you like"</div>
-<div class="skit-card">African parents: "Wake up early!" vs American parents: "Sleep more if needed"</div>
-<div class="skit-card">African parents: "Who told you to laugh?" vs American parents: "What’s funny?"</div>
-<div class="skit-card">African parents: "Face your books!" vs American parents: "Balance your life"</div>
-<div class="skit-card">African parents: "Stop pressing phone!" vs American parents: "Take a break from screen"</div>
-<div class="skit-card">African parents: "You must greet properly!" vs American parents: "Be polite"</div>
-<div class="skit-card">African parents: "You are not serious!" vs American parents: "Try harder"</div>
-<div class="skit-card">African parents: "Come and cook!" vs American parents: "Let’s cook together"</div>
-<div class="skit-card">African parents: "Why are you smiling?" vs American parents: "You look happy"</div>
-<div class="skit-card">African parents: "Don't waste food!" vs American parents: "Store leftovers"</div>
-<div class="skit-card">African parents: "You will not wear that!" vs American parents: "Wear what you like"</div>
-<div class="skit-card">African parents: "Where are you going?" vs American parents: "Have fun"</div>
-<div class="skit-card">African parents: "You must listen!" vs American parents: "Let’s discuss"</div>
-<div class="skit-card">African parents: "Stop playing!" vs American parents: "Take a break"</div>
-<div class="skit-card">African parents: "You must obey!" vs American parents: "Make good choices"</div>
-<div class="skit-card">African parents: "No arguments!" vs American parents: "Explain your point"</div>
-<div class="skit-card">African parents: "Why are you late?" vs American parents: "What happened?"</div>
-<div class="skit-card">African parents: "Don't talk back!" vs American parents: "Speak respectfully"</div>
-<div class="skit-card">African parents: "You must pass!" vs American parents: "Do your best"</div>
-<div class="skit-card">African parents: "Who sent you?" vs American parents: "Who asked you?"</div>
-<div class="skit-card">African parents: "You will clean this house!" vs American parents: "Help around the house"</div>
-<div class="skit-card">African parents: "No excuses!" vs American parents: "What’s the reason?"</div>
-<div class="skit-card">African parents: "I said what I said!" vs American parents: "Let’s talk it through"</div>
+<div class="skit-card" onclick="copyText(this)">African parents: "Who taught you that nonsense?" vs American parents: "Where did you learn that?"</div>
+<div class="skit-card" onclick="copyText(this)">African parents: "Come here now!" vs American parents: "Can we talk?"</div>
+<div class="skit-card" onclick="copyText(this)">African parents: Knock and enter immediately vs American parents: Wait for permission</div>
+<div class="skit-card" onclick="copyText(this)">African parents: "Doctor or lawyer!" vs American parents: "Follow your dreams"</div>
+<div class="skit-card" onclick="copyText(this)">African parents: "Finish your food!" vs American parents: "Eat if you want"</div>
+<div class="skit-card" onclick="copyText(this)">African parents: "Who is calling you?" vs American parents: "It's your phone"</div>
+<div class="skit-card" onclick="copyText(this)">African parents: "You are not going anywhere!" vs American parents: "Be safe"</div>
+<div class="skit-card" onclick="copyText(this)">African parents: "Respect your elders!" vs American parents: "Respect everyone"</div>
+<div class="skit-card" onclick="copyText(this)">African parents: "Why are you sleeping?" vs American parents: "You must be tired"</div>
+<div class="skit-card" onclick="copyText(this)">African parents: "Give me your phone!" vs American parents: "Do you need privacy?"</div>
+<div class="skit-card" onclick="copyText(this)">African parents: "Why is this not A?" vs American parents: "You tried your best"</div>
+<div class="skit-card" onclick="copyText(this)">African parents: "Don't disgrace this family!" vs American parents: "Be yourself"</div>
+<div class="skit-card" onclick="copyText(this)">African parents: "Sit properly!" vs American parents: "Be comfortable"</div>
+<div class="skit-card" onclick="copyText(this)">African parents: "You think life is a joke?" vs American parents: "Let’s be serious"</div>
+<div class="skit-card" onclick="copyText(this)">African parents: "Go and greet them!" vs American parents: "Say hi"</div>
+<div class="skit-card" onclick="copyText(this)">African parents: "Close that door!" vs American parents: "Privacy matters"</div>
+<div class="skit-card" onclick="copyText(this)">African parents: "You will understand later" vs American parents: "Let me explain"</div>
+<div class="skit-card" onclick="copyText(this)">African parents: "No phone for you!" vs American parents: "Reduce screen time"</div>
+<div class="skit-card" onclick="copyText(this)">African parents: "Why are you crying?" vs American parents: "It's okay"</div>
+<div class="skit-card" onclick="copyText(this)">African parents: "I will beat you!" vs American parents: "There will be consequences"</div>
+<div class="skit-card" onclick="copyText(this)">African parents: "Who is your mate?" vs American parents: "Respect others"</div>
+<div class="skit-card" onclick="copyText(this)">African parents: "Turn off that light!" vs American parents: "Save electricity"</div>
+<div class="skit-card" onclick="copyText(this)">African parents: "No going out!" vs American parents: "Have fun"</div>
+<div class="skit-card" onclick="copyText(this)">African parents: "You are too young!" vs American parents: "Let’s talk about it"</div>
+<div class="skit-card" onclick="copyText(this)">African parents: "Why is your result like this?" vs American parents: "We can improve"</div>
+<div class="skit-card" onclick="copyText(this)">African parents: "Don't question me!" vs American parents: "Ask questions"</div>
+<div class="skit-card" onclick="copyText(this)">African parents: "You will marry early!" vs American parents: "Take your time"</div>
+<div class="skit-card" onclick="copyText(this)">African parents: "Eat everything!" vs American parents: "Eat what you like"</div>
+<div class="skit-card" onclick="copyText(this)">African parents: "Wake up early!" vs American parents: "Sleep more if needed"</div>
+<div class="skit-card" onclick="copyText(this)">African parents: "Who told you to laugh?" vs American parents: "What’s funny?"</div>
+<div class="skit-card" onclick="copyText(this)">African parents: "Face your books!" vs American parents: "Balance your life"</div>
+<div class="skit-card" onclick="copyText(this)">African parents: "Stop pressing phone!" vs American parents: "Take a break from screen"</div>
+<div class="skit-card" onclick="copyText(this)">African parents: "You must greet properly!" vs American parents: "Be polite"</div>
+<div class="skit-card" onclick="copyText(this)">African parents: "You are not serious!" vs American parents: "Try harder"</div>
+<div class="skit-card" onclick="copyText(this)">African parents: "Come and cook!" vs American parents: "Let’s cook together"</div>
+<div class="skit-card" onclick="copyText(this)">African parents: "Why are you smiling?" vs American parents: "You look happy"</div>
+<div class="skit-card" onclick="copyText(this)">African parents: "Don't waste food!" vs American parents: "Store leftovers"</div>
+<div class="skit-card" onclick="copyText(this)">African parents: "You will not wear that!" vs American parents: "Wear what you like"</div>
+<div class="skit-card" onclick="copyText(this)">African parents: "Where are you going?" vs American parents: "Have fun"</div>
+<div class="skit-card" onclick="copyText(this)">African parents: "You must listen!" vs American parents: "Let’s discuss"</div>
+<div class="skit-card" onclick="copyText(this)">African parents: "Stop playing!" vs American parents: "Take a break"</div>
+<div class="skit-card" onclick="copyText(this)">African parents: "You must obey!" vs American parents: "Make good choices"</div>
+<div class="skit-card" onclick="copyText(this)">African parents: "No arguments!" vs American parents: "Explain your point"</div>
+<div class="skit-card" onclick="copyText(this)">African parents: "Why are you late?" vs American parents: "What happened?"</div>
+<div class="skit-card" onclick="copyText(this)">African parents: "Don't talk back!" vs American parents: "Speak respectfully"</div>
+<div class="skit-card" onclick="copyText(this)">African parents: "You must pass!" vs American parents: "Do your best"</div>
+<div class="skit-card" onclick="copyText(this)">African parents: "Who sent you?" vs American parents: "Who asked you?"</div>
+<div class="skit-card" onclick="copyText(this)">African parents: "You will clean this house!" vs American parents: "Help around the house"</div>
+<div class="skit-card" onclick="copyText(this)">African parents: "No excuses!" vs American parents: "What’s the reason?"</div>
+<div class="skit-card" onclick="copyText(this)">African parents: "I said what I said!" vs American parents: "Let’s talk it through"</div>
     <!-- ADD YOUR OTHER SKITS HERE -->
 
     <a href="index.html" class="back">⬅️ Back Home</a>
 
 </div>
+<script>
+function copyText(element) {
+    let text = element.innerText;
+    navigator..clipboard.writeText(text);
+    alert("Copied: " + text);
+}
+</script> 
+
 
 </body>
 </html>
