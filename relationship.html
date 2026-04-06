@@ -36,6 +36,7 @@
             border-radius: 12px;
             font-weight: bold;
             text-align: center;
+            cursor: pointer;
         }
 
         .back {
@@ -54,67 +55,75 @@
 
 <div class="container">
 
-    <div class="skit-card">When your crush replies "k" to your long text</div>
-    <div class="skit-card">Trying to act normal after a big argument</div>
-    <div class="skit-card">Watching your partner eat your food without asking</div>
-    <div class="skit-card">Secretly stalking your crush on social media</div>
-    <div class="skit-card">Texting your crush and accidentally sending it to your parents</div>
-    <div class="skit-card">Arguing over who gets the last piece of meat</div>
-    <div class="skit-card">When your partner forgets your anniversary</div>
-    <div class="skit-card">Trying to impress your crush and failing</div>
-    <div class="skit-card">Accidentally liking their old photo while stalking</div>
-    <div class="skit-card">When bae steals your hoodie and refuses to return it</div>
-    <div class="skit-card">Sending a risky text and regretting immediately</div>
-    <div class="skit-card">Trying to act cool when your crush is around</div>
-    <div class="skit-card">Talking to your partner in public but forgetting they can hear you</div>
-    <div class="skit-card">Watching your crush ignore you online but pretending you don’t care</div>
-    <div class="skit-card">Planning a surprise but your partner spoils it themselves</div>
-    <div class="skit-card">When you see your crush with someone else and overreact</div>
-    <div class="skit-card">Getting caught checking your crush’s phone</div>
-    <div class="skit-card">Trying to play it cool after tripping in front of your crush</div>
-    <div class="skit-card">When bae says “Do whatever you want” and you do it wrong</div>
-    <div class="skit-card">Giving relationship advice but secretly failing at yours</div>
-    <div class="skit-card">When your crush notices your embarrassing habit</div>
-    <div class="skit-card">Arguing over where to eat and taking forever to decide</div>
-    <div class="skit-card">When bae uses your stuff without asking and denies it</div>
-    <div class="skit-card">Trying to act mysterious but it backfires</div>
-    <div class="skit-card">Sending a text meant for a friend to your crush</div>
-    <div class="skit-card">When your crush replies instantly and you panic</div>
-    <div class="skit-card">Making up fake excuses to avoid their call</div>
-    <div class="skit-card">Overthinking their one-word reply</div>
-    <div class="skit-card">When your partner eats something you promised yourself</div>
-    <div class="skit-card">Acting shocked when bae buys something expensive for you</div>
-    <div class="skit-card">When bae says “We need to talk” and you panic</div>
-    <div class="skit-card">Trying to look cute but falling flat</div>
-    <div class="skit-card">When your crush catches you staring</div>
-    <div class="skit-card">Arguing over the volume of the TV</div>
-    <div class="skit-card">Getting jealous over a harmless comment</div>
-    <div class="skit-card">When bae forgets what you told them five minutes ago</div>
-    <div class="skit-card">Trying to act busy to avoid calling them</div>
-    <div class="skit-card">Sending a risky message while drunk and regretting it</div>
-    <div class="skit-card">When bae takes forever to reply to a simple text</div>
-    <div class="skit-card">Playing hard to get and getting caught</div>
-    <div class="skit-card">When your partner steals your favorite food secretly</div>
-    <div class="skit-card">Trying to flirt and failing miserably</div>
-    <div class="skit-card">When your crush shares a funny story and you overreact</div>
-    <div class="skit-card">Practicing lines to impress bae and forgetting them</div>
-    <div class="skit-card">Making memes about your relationship secretly</div>
-    <div class="skit-card">Trying to act jealous and failing</div>
-    <div class="skit-card">When bae teases you and you overthink it</div>
-    <div class="skit-card">When your crush likes your old embarrassing post</div>
-    <div class="skit-card">Planning a cute surprise but it backfires</div>
-    <div class="skit-card">Trying to act confident but it comes off awkward</div>
-    <div class="skit-card">When your partner laughs at your serious moment</div>
-    <div class="skit-card">Sending a long message and getting “ok” in reply</div>
-    <div class="skit-card">Trying to hide your phone activity but getting caught</div>
-    <div class="skit-card">When bae copies your style and you notice</div>
-    <div class="skit-card">Arguing over the best movie to watch</div>
+   <div class="skit-card" onclick="copyText(this)">When your crush replies "k" to your long text</div>
+<div class="skit-card" onclick="copyText(this)">Trying to act normal after a big argument</div>
+<div class="skit-card" onclick="copyText(this)">Watching your partner eat your food without asking</div>
+<div class="skit-card" onclick="copyText(this)">Secretly stalking your crush on social media</div>
+<div class="skit-card" onclick="copyText(this)">Texting your crush and accidentally sending it to your parents</div>
+<div class="skit-card" onclick="copyText(this)">Arguing over who gets the last piece of meat</div>
+<div class="skit-card" onclick="copyText(this)">When your partner forgets your anniversary</div>
+<div class="skit-card" onclick="copyText(this)">Trying to impress your crush and failing</div>
+<div class="skit-card" onclick="copyText(this)">Accidentally liking their old photo while stalking</div>
+<div class="skit-card" onclick="copyText(this)">When bae steals your hoodie and refuses to return it</div>
+<div class="skit-card" onclick="copyText(this)">Sending a risky text and regretting immediately</div>
+<div class="skit-card" onclick="copyText(this)">Trying to act cool when your crush is around</div>
+<div class="skit-card" onclick="copyText(this)">Talking to your partner in public but forgetting they can hear you</div>
+<div class="skit-card" onclick="copyText(this)">Watching your crush ignore you online but pretending you don’t care</div>
+<div class="skit-card" onclick="copyText(this)">Planning a surprise but your partner spoils it themselves</div>
+<div class="skit-card" onclick="copyText(this)">When you see your crush with someone else and overreact</div>
+<div class="skit-card" onclick="copyText(this)">Getting caught checking your crush’s phone</div>
+<div class="skit-card" onclick="copyText(this)">Trying to play it cool after tripping in front of your crush</div>
+<div class="skit-card" onclick="copyText(this)">When bae says “Do whatever you want” and you do it wrong</div>
+<div class="skit-card" onclick="copyText(this)">Giving relationship advice but secretly failing at yours</div>
+<div class="skit-card" onclick="copyText(this)">When your crush notices your embarrassing habit</div>
+<div class="skit-card" onclick="copyText(this)">Arguing over where to eat and taking forever to decide</div>
+<div class="skit-card" onclick="copyText(this)">When bae uses your stuff without asking and denies it</div>
+<div class="skit-card" onclick="copyText(this)">Trying to act mysterious but it backfires</div>
+<div class="skit-card" onclick="copyText(this)">Sending a text meant for a friend to your crush</div>
+<div class="skit-card" onclick="copyText(this)">When your crush replies instantly and you panic</div>
+<div class="skit-card" onclick="copyText(this)">Making up fake excuses to avoid their call</div>
+<div class="skit-card" onclick="copyText(this)">Overthinking their one-word reply</div>
+<div class="skit-card" onclick="copyText(this)">When your partner eats something you promised yourself</div>
+<div class="skit-card" onclick="copyText(this)">Acting shocked when bae buys something expensive for you</div>
+<div class="skit-card" onclick="copyText(this)">When bae says “We need to talk” and you panic</div>
+<div class="skit-card" onclick="copyText(this)">Trying to look cute but falling flat</div>
+<div class="skit-card" onclick="copyText(this)">When your crush catches you staring</div>
+<div class="skit-card" onclick="copyText(this)">Arguing over the volume of the TV</div>
+<div class="skit-card" onclick="copyText(this)">Getting jealous over a harmless comment</div>
+<div class="skit-card" onclick="copyText(this)">When bae forgets what you told them five minutes ago</div>
+<div class="skit-card" onclick="copyText(this)">Trying to act busy to avoid calling them</div>
+<div class="skit-card" onclick="copyText(this)">Sending a risky message while drunk and regretting it</div>
+<div class="skit-card" onclick="copyText(this)">When bae takes forever to reply to a simple text</div>
+<div class="skit-card" onclick="copyText(this)">Playing hard to get and getting caught</div>
+<div class="skit-card" onclick="copyText(this)">When your partner steals your favorite food secretly</div>
+<div class="skit-card" onclick="copyText(this)">Trying to flirt and failing miserably</div>
+<div class="skit-card" onclick="copyText(this)">When your crush shares a funny story and you overreact</div>
+<div class="skit-card" onclick="copyText(this)">Practicing lines to impress bae and forgetting them</div>
+<div class="skit-card" onclick="copyText(this)">Making memes about your relationship secretly</div>
+<div class="skit-card" onclick="copyText(this)">Trying to act jealous and failing</div>
+<div class="skit-card" onclick="copyText(this)">When bae teases you and you overthink it</div>
+<div class="skit-card" onclick="copyText(this)">When your crush likes your old embarrassing post</div>
+<div class="skit-card" onclick="copyText(this)">Planning a cute surprise but it backfires</div>
+<div class="skit-card" onclick="copyText(this)">Trying to act confident but it comes off awkward</div>
+<div class="skit-card" onclick="copyText(this)">When your partner laughs at your serious moment</div>
+<div class="skit-card" onclick="copyText(this)">Sending a long message and getting “ok” in reply</div>
+<div class="skit-card" onclick="copyText(this)">Trying to hide your phone activity but getting caught</div>
+<div class="skit-card" onclick="copyText(this)">When bae copies your style and you notice</div>
+<div class="skit-card" onclick="copyText(this)">Arguing over the best movie to watch</div>
 
     <!-- ADD YOUR OTHER SKITS HERE -->
 
     <a href="index.html" class="back">⬅️ Back Home</a>
 
 </div>
+<script>
+function copyText(element) {
+    let text = element.innerText;
+    navigator..clipboard.writeText(text);
+    alert("Copied: " + text);
+}
+</script> 
+
 
 </body>
 </html>
