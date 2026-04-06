@@ -39,6 +39,25 @@
             cursor: pointer;
         }
 
+        .actions {
+            display: none;
+            margin-top: 10px;
+        }
+
+        .actions button {
+            margin: 5px;
+            padding: 8px 12px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            background: #333;
+            color: white;
+        }
+
+        .skit-card.active .actions {
+            display: block;
+        }
+
         .back {
             display: block;
             margin-top: 20px;
@@ -46,7 +65,7 @@
             color: white;
             text-decoration: none;
         }
-    </style>
+    </style> 
 </head>
 
 <body>
@@ -55,67 +74,564 @@
 
 <div class="container"> 
 
-<div class="skit-card" onclick="copyText(this)">When you hear “come here” from African parents</div>
-<div class="skit-card" onclick="copyText(this)">When you forget to greet elders</div>
-<div class="skit-card" onclick="copyText(this)">When teacher says “submit your assignment” and you didn’t do it</div>
-<div class="skit-card" onclick="copyText(this)">When your alarm rings and you ignore it</div>
-<div class="skit-card" onclick="copyText(this)">When you eat food that is not yours</div>
-<div class="skit-card" onclick="copyText(this)">When your phone falls and screen cracks</div>
-<div class="skit-card" onclick="copyText(this)">When you lie and get caught immediately</div>
-<div class="skit-card" onclick="copyText(this)">When your crush sees your embarrassing moment</div>
-<div class="skit-card" onclick="copyText(this)">When you forget your lines during presentation</div>
-<div class="skit-card" onclick="copyText(this)">When NEPA takes light while cooking</div>
-<div class="skit-card" onclick="copyText(this)">When you send message to wrong group chat</div>
-<div class="skit-card" onclick="copyText(this)">When you laugh at serious moment</div>
-<div class="skit-card" onclick="copyText(this)">When you try to run but fall</div>
-<div class="skit-card" onclick="copyText(this)">When you eat spicy food and regret it</div>
-<div class="skit-card" onclick="copyText(this)">When your parents call you by your full name</div>
-<div class="skit-card" onclick="copyText(this)">When your phone battery dies outside</div>
-<div class="skit-card" onclick="copyText(this)">When your friend exposes your secret</div>
-<div class="skit-card" onclick="copyText(this)">When you fail test after reading</div>
-<div class="skit-card" onclick="copyText(this)">When you mistakenly call teacher “mummy”</div>
-<div class="skit-card" onclick="copyText(this)">When your crush says “we are just friends”</div>
-<div class="skit-card" onclick="copyText(this)">When you try to impress and fail badly</div>
-<div class="skit-card" onclick="copyText(this)">When you fall in public and stand up like nothing happened</div>
-<div class="skit-card" onclick="copyText(this)">When you send voice note by mistake</div>
-<div class="skit-card" onclick="copyText(this)">When your internet finishes during download</div>
-<div class="skit-card" onclick="copyText(this)">When you oversleep and miss class</div>
-<div class="skit-card" onclick="copyText(this)">When your parents find your hidden snacks</div>
-<div class="skit-card" onclick="copyText(this)">When you get caught cheating in exam</div>
-<div class="skit-card" onclick="copyText(this)">When your shoe tears outside</div>
-<div class="skit-card" onclick="copyText(this)">When you wave at someone who wasn’t waving at you</div>
-<div class="skit-card" onclick="copyText(this)">When you pretend to understand but don’t</div>
-<div class="skit-card" onclick="copyText(this)">When your phone rings in silent environment</div>
-<div class="skit-card" onclick="copyText(this)">When you say “last game” and lose again</div>
-<div class="skit-card" onclick="copyText(this)">When your crush ignores your message</div>
-<div class="skit-card" onclick="copyText(this)">When you mistakenly like old post</div>
-<div class="skit-card" onclick="copyText(this)">When you try to sneak out and get caught</div>
-<div class="skit-card" onclick="copyText(this)">When you laugh and snort in public</div>
-<div class="skit-card" onclick="copyText(this)">When you forget important date</div>
-<div class="skit-card" onclick="copyText(this)">When you trip in front of everyone</div>
-<div class="skit-card" onclick="copyText(this)">When teacher calls you to answer question</div>
-<div class="skit-card" onclick="copyText(this)">When you send money to wrong person</div>
-<div class="skit-card" onclick="copyText(this)">When your data finishes unexpectedly</div>
-<div class="skit-card" onclick="copyText(this)">When your friend betrays you</div>
-<div class="skit-card" onclick="copyText(this)">When you try to act rich but fail</div>
-<div class="skit-card" onclick="copyText(this)">When you wear slippers and it breaks</div>
-<div class="skit-card" onclick="copyText(this)">When your secret gets exposed</div>
-<div class="skit-card" onclick="copyText(this)">When you forget your password</div>
-<div class="skit-card" onclick="copyText(this)">When your crush sees your embarrassing photo</div>
-<div class="skit-card" onclick="copyText(this)">When you try to lie but laugh</div>
-<div class="skit-card" onclick="copyText(this)">When your parents say “we need to talk”</div>
-<div class="skit-card" onclick="copyText(this)">When everything goes wrong in one day</div>
+<div class="skit-card" onclick="toggleOptions(this)" data-summary="Act like you hear your parent call you in a serious tone. Show fear instantly, pause what you're doing, and slowly walk towards them like you're about to be in trouble.">
+When you hear “come here” from African parents
+<div class="actions">
+<button onclick="copyText(event, this)">📋 Copy</button>
+<button onclick="saveText(event, this)">💾 Save</button>
+<button onclick="showSummary(event, this)">🧠 Summary</button>
+<button onclick="shareText(event, this)">📤 Share</button>
+</div>
+</div>
+
+<div class="skit-card" onclick="toggleOptions(this)" data-summary="Show yourself walking confidently, then suddenly remember you didn’t greet elders. Quickly switch to panic mode and rush back awkwardly to greet them.">
+When you forget to greet elders
+<div class="actions">
+<button onclick="copyText(event, this)">📋 Copy</button>
+<button onclick="saveText(event, this)">💾 Save</button>
+<button onclick="showSummary(event, this)">🧠 Summary</button>
+<button onclick="shareText(event, this)">📤 Share</button>
+</div>
+</div>
+
+<div class="skit-card" onclick="toggleOptions(this)" data-summary="Act calm in class, then suddenly panic when the teacher asks for assignments. Show searching your bag, fake confidence, and eventual embarrassment.">
+When teacher says “submit your assignment” and you didn’t do it
+<div class="actions">
+<button onclick="copyText(event, this)">📋 Copy</button>
+<button onclick="saveText(event, this)">💾 Save</button>
+<button onclick="showSummary(event, this)">🧠 Summary</button>
+<button onclick="shareText(event, this)">📤 Share</button>
+</div>
+</div>
+
+<div class="skit-card" onclick="toggleOptions(this)" data-summary="Show your alarm ringing loudly while you struggle to wake up. Turn it off and go back to sleep dramatically like you don’t care.">
+When your alarm rings and you ignore it
+<div class="actions">
+<button onclick="copyText(event, this)">📋 Copy</button>
+<button onclick="saveText(event, this)">💾 Save</button>
+<button onclick="showSummary(event, this)">🧠 Summary</button>
+<button onclick="shareText(event, this)">📤 Share</button>
+</div>
+</div>
+
+<div class="skit-card" onclick="toggleOptions(this)" data-summary="Act sneaky while eating someone else’s food. Then suddenly get caught and switch to pretending like nothing happened.">
+When you eat food that is not yours
+<div class="actions">
+<button onclick="copyText(event, this)">📋 Copy</button>
+<button onclick="saveText(event, this)">💾 Save</button>
+<button onclick="showSummary(event, this)">🧠 Summary</button>
+<button onclick="shareText(event, this)">📤 Share</button>
+</div>
+</div>
+
+<div class="skit-card" onclick="toggleOptions(this)" data-summary="Show your phone falling in slow motion. React with shock, panic, and then slowly check the screen with fear.">
+When your phone falls and screen cracks
+<div class="actions">
+<button onclick="copyText(event, this)">📋 Copy</button>
+<button onclick="saveText(event, this)">💾 Save</button>
+<button onclick="showSummary(event, this)">🧠 Summary</button>
+<button onclick="shareText(event, this)">📤 Share</button>
+</div>
+</div>
+
+<div class="skit-card" onclick="toggleOptions(this)" data-summary="Act confident while lying, then immediately get exposed. Show awkward silence, nervous laughter, and trying to escape.">
+When you lie and get caught immediately
+<div class="actions">
+<button onclick="copyText(event, this)">📋 Copy</button>
+<button onclick="saveText(event, this)">💾 Save</button>
+<button onclick="showSummary(event, this)">🧠 Summary</button>
+<button onclick="shareText(event, this)">📤 Share</button>
+</div>
+</div>
+
+<div class="skit-card" onclick="toggleOptions(this)" data-summary="Act normal, then suddenly do something embarrassing in front of your crush. Freeze, panic, and try to recover your dignity.">
+When your crush sees your embarrassing moment
+<div class="actions">
+<button onclick="copyText(event, this)">📋 Copy</button>
+<button onclick="saveText(event, this)">💾 Save</button>
+<button onclick="showSummary(event, this)">🧠 Summary</button>
+<button onclick="shareText(event, this)">📤 Share</button>
+</div>
+</div>
+
+<div class="skit-card" onclick="toggleOptions(this)" data-summary="Show confidence before presenting, then forget everything. Pause, panic, and try to improvise nonsense.">
+When you forget your lines during presentation
+<div class="actions">
+<button onclick="copyText(event, this)">📋 Copy</button>
+<button onclick="saveText(event, this)">💾 Save</button>
+<button onclick="showSummary(event, this)">🧠 Summary</button>
+<button onclick="shareText(event, this)">📤 Share</button>
+</div>
+</div>
+
+<div class="skit-card" onclick="toggleOptions(this)" data-summary="Act focused while cooking, then suddenly NEPA takes light. Show confusion, frustration, and trying to continue in darkness.">
+When NEPA takes light while cooking
+<div class="actions">
+<button onclick="copyText(event, this)">📋 Copy</button>
+<button onclick="saveText(event, this)">💾 Save</button>
+<button onclick="showSummary(event, this)">🧠 Summary</button>
+<button onclick="shareText(event, this)">📤 Share</button>
+</div>
+</div>
+
+<div class="skit-card">
+When you send message to wrong group chat
+<div class="options">
+<button onclick="copyText(this)">Copy</button>
+<button onclick="saveText(this)">Save</button>
+<button onclick="showSummary(this)" data-summary="You confidently send a message, then realize it's the wrong group. Panic and try to delete quickly.">Summary</button>
+<button onclick="shareText(this)">Share</button>
+</div>
+</div>
+
+<div class="skit-card">
+When you laugh at serious moment
+<div class="options">
+<button onclick="copyText(this)">Copy</button>
+<button onclick="saveText(this)">Save</button>
+<button onclick="showSummary(this)" data-summary="Everyone is serious, but you start laughing uncontrollably and try to hide it.">Summary</button>
+<button onclick="shareText(this)">Share</button>
+</div>
+</div>
+
+<div class="skit-card">
+When you try to run but fall
+<div class="options">
+<button onclick="copyText(this)">Copy</button>
+<button onclick="saveText(this)">Save</button>
+<button onclick="showSummary(this)" data-summary="You run confidently, trip suddenly, fall, then quickly stand like nothing happened.">Summary</button>
+<button onclick="shareText(this)">Share</button>
+</div>
+</div>
+
+<div class="skit-card">
+When you eat spicy food and regret it
+<div class="options">
+<button onclick="copyText(this)">Copy</button>
+<button onclick="saveText(this)">Save</button>
+<button onclick="showSummary(this)" data-summary="You act strong eating spicy food, then slowly start struggling and searching for water.">Summary</button>
+<button onclick="shareText(this)">Share</button>
+</div>
+</div>
+
+<div class="skit-card">
+When your parents call you by your full name
+<div class="options">
+<button onclick="copyText(this)">Copy</button>
+<button onclick="saveText(this)">Save</button>
+<button onclick="showSummary(this)" data-summary="You hear your full name shouted, freeze instantly, and slowly respond knowing trouble is coming.">Summary</button>
+<button onclick="shareText(this)">Share</button>
+</div>
+</div>
+
+<div class="skit-card">
+When your phone battery dies outside
+<div class="options">
+<button onclick="copyText(this)">Copy</button>
+<button onclick="saveText(this)">Save</button>
+<button onclick="showSummary(this)" data-summary="You check your phone and see 1%, panic, then it dies completely and you're stranded.">Summary</button>
+<button onclick="shareText(this)">Share</button>
+</div>
+</div>
+
+<div class="skit-card">
+When your friend exposes your secret
+<div class="options">
+<button onclick="copyText(this)">Copy</button>
+<button onclick="saveText(this)">Save</button>
+<button onclick="showSummary(this)" data-summary="Your friend casually reveals your secret in front of others, and you react in shock trying to stop them.">Summary</button>
+<button onclick="shareText(this)">Share</button>
+</div>
+</div>
+
+<div class="skit-card">
+When you fail test after reading
+<div class="options">
+<button onclick="copyText(this)">Copy</button>
+<button onclick="saveText(this)">Save</button>
+<button onclick="showSummary(this)" data-summary="You study hard, feel confident, then see your result and freeze in disappointment.">Summary</button>
+<button onclick="shareText(this)">Share</button>
+</div>
+</div>
+
+<div class="skit-card">
+When you mistakenly call teacher “mummy”
+<div class="options">
+<button onclick="copyText(this)">Copy</button>
+<button onclick="saveText(this)">Save</button>
+<button onclick="showSummary(this)" data-summary="You call your teacher 'mummy' by mistake, then try to correct it while everyone laughs.">Summary</button>
+<button onclick="shareText(this)">Share</button>
+</div>
+</div>
+
+<div class="skit-card">
+When your crush says “we are just friends”
+<div class="options">
+<button onclick="copyText(this)">Copy</button>
+<button onclick="saveText(this)">Save</button>
+<button onclick="showSummary(this)" data-summary="You confess feelings, they friendzone you, and you pretend you're okay but clearly hurt.">Summary</button>
+<button onclick="shareText(this)">Share</button>
+</div>
+</div>
+
+<div class="skit-card">
+When you try to impress and fail badly
+<div class="options">
+<button onclick="copyText(this)">Copy</button>
+<button onclick="saveText(this)">Save</button>
+<button onclick="showSummary(this)" data-summary="You attempt something impressive, mess up badly, and try to act like it was intentional.">Summary</button>
+<button onclick="shareText(this)">Share</button>
+</div>
+</div>
+
+<div class="skit-card">
+When you fall in public and stand up like nothing happened
+<div class="options">
+<button onclick="copyText(this)">Copy</button>
+<button onclick="saveText(this)">Save</button>
+<button onclick="showSummary(this)" data-summary="You fall in public, quickly stand up, dust yourself, and pretend nothing happened.">Summary</button>
+<button onclick="shareText(this)">Share</button>
+</div>
+</div>
+
+<div class="skit-card">
+When you send voice note by mistake
+<div class="options">
+<button onclick="copyText(this)">Copy</button>
+<button onclick="saveText(this)">Save</button>
+<button onclick="showSummary(this)" data-summary="You accidentally send a voice note and panic trying to delete it before it's heard.">Summary</button>
+<button onclick="shareText(this)">Share</button>
+</div>
+</div>
+
+<div class="skit-card">
+When your internet finishes during download
+<div class="options">
+<button onclick="copyText(this)">Copy</button>
+<button onclick="saveText(this)">Save</button>
+<button onclick="showSummary(this)" data-summary="Download almost completes, then stops at 99% due to no data. Show frustration.">Summary</button>
+<button onclick="shareText(this)">Share</button>
+</div>
+</div>
+
+<div class="skit-card">
+When you oversleep and miss class
+<div class="options">
+<button onclick="copyText(this)">Copy</button>
+<button onclick="saveText(this)">Save</button>
+<button onclick="showSummary(this)" data-summary="You wake up late, check time, panic and rush around trying to get ready.">Summary</button>
+<button onclick="shareText(this)">Share</button>
+</div>
+</div>
+
+<div class="skit-card">
+When your parents find your hidden snacks
+<div class="options">
+<button onclick="copyText(this)">Copy</button>
+<button onclick="saveText(this)">Save</button>
+<button onclick="showSummary(this)" data-summary="Parents discover your hidden snacks and question you while you try to explain awkwardly.">Summary</button>
+<button onclick="shareText(this)">Share</button>
+</div>
+</div>
+
+<div class="skit-card">
+When you get caught cheating in exam
+<div class="options">
+<button onclick="copyText(this)">Copy</button>
+<button onclick="saveText(this)">Save</button>
+<button onclick="showSummary(this)" data-summary="You attempt to cheat, get caught instantly, and slowly accept your fate in silence.">Summary</button>
+<button onclick="shareText(this)">Share</button>
+</div>
+</div>
+
+<div class="skit-card">
+When your shoe tears outside
+<div class="options">
+<button onclick="copyText(this)">Copy</button>
+<button onclick="saveText(this)">Save</button>
+<button onclick="showSummary(this)" data-summary="You're walking confidently, your shoe suddenly tears, and you try to adjust your walk to hide it.">Summary</button>
+<button onclick="shareText(this)">Share</button>
+</div>
+</div>
+
+<div class="skit-card">
+When you wave at someone who wasn’t waving at you
+<div class="options">
+<button onclick="copyText(this)">Copy</button>
+<button onclick="saveText(this)">Save</button>
+<button onclick="showSummary(this)" data-summary="You wave happily, then realize it wasn’t for you and slowly turn it into something else.">Summary</button>
+<button onclick="shareText(this)">Share</button>
+</div>
+</div>
+
+<div class="skit-card">
+When you pretend to understand but don’t
+<div class="options">
+<button onclick="copyText(this)">Copy</button>
+<button onclick="saveText(this)">Save</button>
+<button onclick="showSummary(this)" data-summary="You nod confidently like you understand, but inside you're completely lost.">Summary</button>
+<button onclick="shareText(this)">Share</button>
+</div>
+</div>
+
+<div class="skit-card">
+When your phone rings in silent environment
+<div class="options">
+<button onclick="copyText(this)">Copy</button>
+<button onclick="saveText(this)">Save</button>
+<button onclick="showSummary(this)" data-summary="In a quiet place, your loud ringtone goes off and everyone turns to look at you.">Summary</button>
+<button onclick="shareText(this)">Share</button>
+</div>
+</div>
+
+<div class="skit-card">
+When you say “last game” and lose again
+<div class="options">
+<button onclick="copyText(this)">Copy</button>
+<button onclick="saveText(this)">Save</button>
+<button onclick="showSummary(this)" data-summary="You promise it's your last game, lose badly, then angrily decide to play again.">Summary</button>
+<button onclick="shareText(this)">Share</button>
+</div>
+</div>
+
+<div class="skit-card">
+When your crush ignores your message
+<div class="options">
+<button onclick="copyText(this)">Copy</button>
+<button onclick="saveText(this)">Save</button>
+<button onclick="showSummary(this)" data-summary="You keep checking your phone repeatedly, hoping for a reply that never comes.">Summary</button>
+<button onclick="shareText(this)">Share</button>
+</div>
+</div>
+
+<div class="skit-card">
+When you mistakenly like old post
+<div class="options">
+<button onclick="copyText(this)">Copy</button>
+<button onclick="saveText(this)">Save</button>
+<button onclick="showSummary(this)" data-summary="You're stalking, accidentally like an old post, then panic and quickly unlike it.">Summary</button>
+<button onclick="shareText(this)">Share</button>
+</div>
+</div>
+
+<div class="skit-card">
+When you try to sneak out and get caught
+<div class="options">
+<button onclick="copyText(this)">Copy</button>
+<button onclick="saveText(this)">Save</button>
+<button onclick="showSummary(this)" data-summary="You sneak quietly, then suddenly someone calls your name and you freeze.">Summary</button>
+<button onclick="shareText(this)">Share</button>
+</div>
+</div>
+
+<div class="skit-card">
+When you laugh and snort in public
+<div class="options">
+<button onclick="copyText(this)">Copy</button>
+<button onclick="saveText(this)">Save</button>
+<button onclick="showSummary(this)" data-summary="You laugh too hard and snort, then try to act like nothing happened.">Summary</button>
+<button onclick="shareText(this)">Share</button>
+</div>
+</div>
+
+<div class="skit-card">
+When you forget important date
+<div class="options">
+<button onclick="copyText(this)">Copy</button>
+<button onclick="saveText(this)">Save</button>
+<button onclick="showSummary(this)" data-summary="You suddenly remember an important date too late and start panicking.">Summary</button>
+<button onclick="shareText(this)">Share</button>
+</div>
+</div>
+
+<div class="skit-card">
+When you trip in front of everyone
+<div class="options">
+<button onclick="copyText(this)">Copy</button>
+<button onclick="saveText(this)">Save</button>
+<button onclick="showSummary(this)" data-summary="You trip suddenly, quickly stand up and pretend it didn’t happen.">Summary</button>
+<button onclick="shareText(this)">Share</button>
+</div>
+</div>
+
+<div class="skit-card">
+When teacher calls you to answer question
+<div class="options">
+<button onclick="copyText(this)">Copy</button>
+<button onclick="saveText(this)">Save</button>
+<button onclick="showSummary(this)" data-summary="Teacher calls you, you stand up slowly and try to guess the answer nervously.">Summary</button>
+<button onclick="shareText(this)">Share</button>
+</div>
+</div>
+
+<div class="skit-card">
+When you send money to wrong person
+<div class="options">
+<button onclick="copyText(this)">Copy</button>
+<button onclick="saveText(this)">Save</button>
+<button onclick="showSummary(this)" data-summary="You send money, then realize it went to the wrong person and panic immediately.">Summary</button>
+<button onclick="shareText(this)">Share</button>
+</div>
+</div>
+
+<div class="skit-card">
+When your data finishes unexpectedly
+<div class="options">
+<button onclick="copyText(this)">Copy</button>
+<button onclick="saveText(this)">Save</button>
+<button onclick="showSummary(this)" data-summary="You're enjoying internet, then suddenly it stops and you realize your data is gone.">Summary</button>
+<button onclick="shareText(this)">Share</button>
+</div>
+</div>
+
+<div class="skit-card">
+When your friend betrays you
+<div class="options">
+<button onclick="copyText(this)">Copy</button>
+<button onclick="saveText(this)">Save</button>
+<button onclick="showSummary(this)" data-summary="Your friend exposes or disappoints you and you react with shock and disbelief.">Summary</button>
+<button onclick="shareText(this)">Share</button>
+</div>
+</div>
+
+<div class="skit-card">
+When you try to act rich but fail
+<div class="options">
+<button onclick="copyText(this)">Copy</button>
+<button onclick="saveText(this)">Save</button>
+<button onclick="showSummary(this)" data-summary="You try to show off like you're rich, then something exposes you.">Summary</button>
+<button onclick="shareText(this)">Share</button>
+</div>
+</div>
+
+<div class="skit-card">
+When you wear slippers and it breaks
+<div class="options">
+<button onclick="copyText(this)">Copy</button>
+<button onclick="saveText(this)">Save</button>
+<button onclick="showSummary(this)" data-summary="Your slippers break while walking and you struggle to keep moving normally.">Summary</button>
+<button onclick="shareText(this)">Share</button>
+</div>
+</div>
+
+<div class="skit-card">
+When your secret gets exposed
+<div class="options">
+<button onclick="copyText(this)">Copy</button>
+<button onclick="saveText(this)">Save</button>
+<button onclick="showSummary(this)" data-summary="Someone reveals your secret and you react in shock trying to deny it.">Summary</button>
+<button onclick="shareText(this)">Share</button>
+</div>
+</div>
+
+<div class="skit-card">
+When you forget your password
+<div class="options">
+<button onclick="copyText(this)">Copy</button>
+<button onclick="saveText(this)">Save</button>
+<button onclick="showSummary(this)" data-summary="You try different passwords repeatedly and get locked out in frustration.">Summary</button>
+<button onclick="shareText(this)">Share</button>
+</div>
+</div>
+
+<div class="skit-card">
+When your crush sees your embarrassing photo
+<div class="options">
+<button onclick="copyText(this)">Copy</button>
+<button onclick="saveText(this)">Save</button>
+<button onclick="showSummary(this)" data-summary="Your crush finds an embarrassing photo of you and you try to explain awkwardly.">Summary</button>
+<button onclick="shareText(this)">Share</button>
+</div>
+</div>
+
+<div class="skit-card">
+When you try to lie but laugh
+<div class="options">
+<button onclick="copyText(this)">Copy</button>
+<button onclick="saveText(this)">Save</button>
+<button onclick="showSummary(this)" data-summary="You try to lie seriously but start laughing and expose yourself.">Summary</button>
+<button onclick="shareText(this)">Share</button>
+</div>
+</div>
+
+<div class="skit-card">
+When your parents say “we need to talk”
+<div class="options">
+<button onclick="copyText(this)">Copy</button>
+<button onclick="saveText(this)">Save</button>
+<button onclick="showSummary(this)" data-summary="You hear 'we need to talk' and immediately start overthinking everything you did.">Summary</button>
+<button onclick="shareText(this)">Share</button>
+</div>
+</div>
+
+<div class="skit-card">
+When everything goes wrong in one day
+<div class="options">
+<button onclick="copyText(this)">Copy</button>
+<button onclick="saveText(this)">Save</button>
+<button onclick="showSummary(this)" data-summary="One bad thing leads to another all day and you end up frustrated and exhausted.">Summary</button>
+<button onclick="shareText(this)">Share</button>
+</div>
+</div>
+
 </div> 
 
     <a href="index.html" class="back">⬅️ Back Home</a>
 
 <script>
-function copyText(element) {
-    let text = element.innerText;
-    navigator.clipboard.writeText(text);
-    alert("Copied: " + text);
+function toggleOptions(card) {
+    document.querySelectorAll('.skit-card').forEach(c => {
+        if (c !== card) c.classList.remove('active');
+    });
+    card.classList.toggle("active");
 }
-</script>
+
+function getText(btn) {
+    return btn.parentElement.parentElement.childNodes[0].textContent.trim();
+}
+
+function copyText(event, btn) {
+    event.stopPropagation();
+    let text = getText(btn);
+    navigator.clipboard.writeText(text);
+    alert("Copied!");
+}
+
+function saveText(event, btn) {
+    event.stopPropagation();
+    let text = getText(btn);
+
+    let saved = JSON.parse(localStorage.getItem("savedSkits")) || [];
+    saved.push(text);
+    localStorage.setItem("savedSkits", JSON.stringify(saved));
+
+    alert("Saved!");
+}
+
+function showSummary(event, btn) {
+    event.stopPropagation();
+
+    let card = btn.parentElement.parentElement;
+    let title = card.childNodes[0].textContent.trim();
+    let summary = card.getAttribute("data-summary");
+
+    alert("🎬 " + title + "\n\n🧠 " + summary);
+}
+
+function shareText(event, btn) {
+    event.stopPropagation();
+    let text = getText(btn);
+
+    if (navigator.share) {
+        navigator.share({
+            title: "Skit Idea",
+            text: text
+        });
+    } else {
+        alert("Sharing not supported on this device");
+    }
+}
+</script> 
 
 </body>
 </html>
