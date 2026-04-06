@@ -1,72 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
+    <title>POV Skits</title>
+
+    <!-- MOBILE FIX -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coffin Comedy Skits</title>
+
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f8f8f8;
+            font-family: Arial;
+            background: #121212;
             margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #ff5a5f;
             color: white;
-            text-align: center;
-            padding: 20px 0;
         }
-        header h1 {
+
+        h1 {
+            background: #1f1f1f;
+            padding: 20px;
+            text-align: center;
             margin: 0;
         }
+
         .container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin: 20px;
-            gap: 15px;
+            width: 90%;
+            max-width: 500px;
+            margin: auto;
+            margin-top: 30px;
         }
+
         .skit-card {
-            background-color: white;
+            background: white;
+            color: black;
             padding: 15px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
-            width: 250px;
-            cursor: pointer;
-            transition: transform 0.2s, background-color 0.2s;
-        }
-        .skit-card:hover {
-            transform: scale(1.05);
-            background-color: #ffe0e0;
-        }
-        .back-home {
-            display: block;
-            text-align: center;
-            margin: 30px 0;
-        }
-        .back-home a {
-            text-decoration: none;
-            background-color: #ff5a5f;
-            color: white;
-            padding: 12px 25px;
-            border-radius: 8px;
+            margin: 10px 0;
+            border-radius: 12px;
             font-weight: bold;
-            transition: background-color 0.2s;
+            text-align: center;
         }
-        .back-home a:hover {
-            background-color: #ff3030;
+
+        .back {
+            display: block;
+            margin-top: 20px;
+            text-align: center;
+            color: white;
+            text-decoration: none;
         }
     </style>
 </head>
-<body>
-    <header>
-        <h1>Coffin Comedy Skits</h1>
-        <p>Your one-stop place for funny, relatable skits!</p>
-    </header>
 
-    <div class="container">
-        <div class="skit-card">When you hear “come here” from African parents</div>
+<body>
+
+<h1>👀 POV Skits</h1>
+
+<div class="container">
+
+    <div class="skit-card">When you hear “come here” from African parents</div>
         <div class="skit-card">When you forget to greet elders</div>
         <div class="skit-card">When teacher says “submit your assignment” and you didn’t do it</div>
         <div class="skit-card">When your alarm rings and you ignore it</div>
@@ -116,10 +104,11 @@
         <div class="skit-card">When you try to lie but laugh</div>
         <div class="skit-card">When your parents say “we need to talk”</div>
         <div class="skit-card">When everything goes wrong in one day</div>
-    </div>
+    <!-- ADD YOUR OTHER SKITS HERE -->
 
-    <div class="back-home">
-        <a href="index.html">← Go Back Home</a>
-    </div>
+    <a href="index.html" class="back">⬅️ Back Home</a>
+
+</div>
+
 </body>
 </html>
