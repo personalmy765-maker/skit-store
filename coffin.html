@@ -579,6 +579,7 @@ When everything goes wrong in one day
     <a href="index.html" class="back">⬅️ Back Home</a>
 
 <script>
+// TOGGLE OPTIONS
 function toggleOptions(card) {
     document.querySelectorAll('.skit-card').forEach(c => {
         if (c !== card) c.classList.remove('active');
@@ -586,45 +587,54 @@ function toggleOptions(card) {
     card.classList.toggle("active");
 }
 
+// GET SKIT TEXT (clean + reliable)
 function getText(btn) {
-    return btn.parentElement.parentElement.childNodes[0].textContent.trim();
+    let card = btn.closest(".skit-card");
+    return card.childNodes[0].textContent.trim();
 }
 
+// COPY
 function copyText(event, btn) {
     event.stopPropagation();
+
     let text = getText(btn);
-    navigator.clipboard.writeText(text);
-    alert("Copied!");
+    navigator.clipboard.writeText(text)
+        .then(() => alert("📋 Copied!"))
+        .catch(() => alert("Copy failed"));
 }
 
+// SAVE (FIXED + STRONG)
 function saveText(event, btn) {
     event.stopPropagation();
 
-    let text = btn.parentElement.parentElement.childNodes[0].textContent.trim();
+    let text = getText(btn);
 
     let saved = JSON.parse(localStorage.getItem("savedSkits")) || [];
 
     if (!saved.includes(text)) {
         saved.push(text);
         localStorage.setItem("savedSkits", JSON.stringify(saved));
-        alert("Saved!");
+        alert("💾 Saved!");
     } else {
         alert("Already saved!");
     }
-} 
+}
 
+// SHOW SUMMARY (CLEAN)
 function showSummary(event, btn) {
     event.stopPropagation();
 
-    let card = btn.parentElement.parentElement;
+    let card = btn.closest(".skit-card");
     let title = card.childNodes[0].textContent.trim();
     let summary = card.getAttribute("data-summary");
 
     alert("🎬 " + title + "\n\n🧠 " + summary);
 }
 
+// SHARE (IMPROVED + FALLBACK)
 function shareText(event, btn) {
     event.stopPropagation();
+
     let text = getText(btn);
 
     if (navigator.share) {
@@ -633,10 +643,12 @@ function shareText(event, btn) {
             text: text
         });
     } else {
-        alert("Sharing not supported on this device");
+        // fallback → copy instead
+        navigator.clipboard.writeText(text);
+        alert("📤 Copied for sharing!");
     }
 }
-</script> 
+</script>
 
 </body>
 </html>
