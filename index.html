@@ -3,7 +3,6 @@
 <head>
     <title>Skit Store</title>
 
-    <!-- ✅ THIS FIXES MOBILE SIZE -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
@@ -22,7 +21,6 @@
             text-align: center;
         }
 
-        /* ✅ CENTER AND SCALE CONTENT */
         .container {
             width: 90%;
             max-width: 400px;
@@ -30,7 +28,6 @@
             margin-top: 50px;
         }
 
-        /* ✅ BIGGER, BETTER BUTTONS */
         .card {
             display: block;
             background: #ffffff;
@@ -46,10 +43,27 @@
             transition: 0.3s;
         }
 
-        /* ✅ NICE HOVER EFFECT */
         .card:hover {
             transform: scale(1.05);
             background: #f0f0f0;
+        }
+
+        /* ✅ NEW STYLE FOR SAVED BUTTON */
+        .saved-btn {
+            display: block;
+            background: #00c853;
+            color: white;
+            margin: 25px 0;
+            padding: 15px;
+            border-radius: 15px;
+            text-decoration: none;
+            text-align: center;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .saved-btn:hover {
+            background: #00b34a;
         }
     </style>
 
@@ -63,7 +77,10 @@
     <a href="pov.html" class="card">👀 POV</a>
     <a href="parents.html" class="card">🌍 African Parents</a>
     <a href="coffin.html" class="card">⚰️ Coffin Comedy</a>
+
+    <!-- ✅ THIS IS THE NEW BUTTON -->
+    <a href="saved.html" class="saved-btn">💾 View Saved Skits</a>
 </div>
 
 </body>
-</html> 
+</html>

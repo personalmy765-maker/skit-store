@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>💾 Saved Skits</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+    font-family: Arial;
+    background: #121212;
+    color: white;
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    padding: 20px;
+    background: #1f1f1f;
+}
+
+.container {
+    width: 90%;
+    max-width: 500px;
+    margin: auto;
+}
+
+.skit {
+    background: white;
+    color: black;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>💾 Saved Skits</h1>
+
+<div class="container" id="savedList"></div>
+
+<script>
+let saved = JSON.parse(localStorage.getItem("savedSkits")) || [];
+
+let container = document.getElementById("savedList");
+
+if (saved.length === 0) {
+    container.innerHTML = "<p>No saved skits yet.</p>";
+} else {
+    saved.forEach(skit => {
+        let div = document.createElement("div");
+        div.className = "skit";
+        div.innerText = skit;
+        container.appendChild(div);
+    });
+}
+</script>
+
+</body>
+</html> 

@@ -28,6 +28,25 @@
             margin-top: 30px;
         }
 
+        .actions {
+            display: none;
+            margin-top: 10px;
+        }
+
+        .actions button {
+            margin: 5px;
+            padding: 8px 12px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            background: #333;
+            color: white;
+        }
+
+        .skit-card.active .actions {
+            display: block;
+        }
+
         .skit-card {
             background: white;
             color: black;
@@ -110,12 +129,62 @@
     <a href="index.html" class="back">⬅️ Back Home</a>
 
 <script>
-function copyText(element) {
-    let text = element.innerText;
+function toggleOptions(card) {
+    document.querySelectorAll('.skit-card').forEach(c => {
+        if (c !== card) c.classList.remove('active');
+    });
+    card.classList.toggle("active");
+}
+
+function getText(btn) {
+    return btn.parentElement.parentElement.childNodes[0].textContent.trim();
+}
+
+function copyText(event, btn) {
+    event.stopPropagation();
+    let text = getText(btn);
     navigator.clipboard.writeText(text);
-    alert("Copied: " + text);
+    alert("Copied!");
+}
+
+function saveText(event, btn) {
+    event.stopPropagation();
+
+    let text = btn.parentElement.parentElement.childNodes[0].textContent.trim();
+
+    let saved = JSON.parse(localStorage.getItem("savedSkits")) || [];
+
+    if (!saved.includes(text)) {
+        saved.push(text);
+        localStorage.setItem("savedSkits", JSON.stringify(saved));
+        alert("Saved!");
+    } else {
+        alert("Already saved!");
+    }
+}
+function showSummary(event, btn) {
+    event.stopPropagation();
+
+    let card = btn.parentElement.parentElement;
+    let title = card.childNodes[0].textContent.trim();
+    let summary = card.getAttribute("data-summary");
+
+    alert("🎬 " + title + "\n\n🧠 " + summary);
+}
+
+function shareText(event, btn) {
+    event.stopPropagation();
+    let text = getText(btn);
+
+    if (navigator.share) {
+        navigator.share({
+            title: "Skit Idea",
+            text: text
+        });
+    } else {
+        alert("Sharing not supported on this device");
+    }
 }
 </script>
-
 </body>
 </html>
